@@ -1,0 +1,19 @@
+ID: datatype
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: datatypedb
+   type: hdb
+   path: datatypedb
+   requires:
+    - name: hdi_datatypedb
+
+resources:
+ - name: hdi_datatypedb
+   parameters:
+      config:
+         schema: DATATYPEDB
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
